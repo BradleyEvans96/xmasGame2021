@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +21,7 @@ public class Enterable : Interactable
         }
         else
         {
-            Debug.Log("Enter as you please");
+            SceneManager.LoadScene(sceneName);
         }
     }
 
