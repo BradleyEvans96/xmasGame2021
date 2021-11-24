@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+[RequireComponent(typeof(BoxCollider2D))]
+
+public abstract class Interactable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Reset()
     {
-        
+        GetComponent<BoxCollider2D>().isTrigger = true;
+    }
+    public abstract void Interact();
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerMovement>().openInteractableIcon();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerMovement>().closeInteractableIcon();
+        }
     }
 }

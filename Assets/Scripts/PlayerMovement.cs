@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int maxjumpCount = 1;
 
+    private Vector2 boxSize = new Vector2(0.1f, 1f);
     private void Start()
     {
         jumpCount = maxjumpCount;
@@ -35,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            checkInteraction();
+        }
+
         // Get Inputs
         ProcessInputs();
 
@@ -91,5 +97,32 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void openInteractableIcon()
+    {
+        Debug.Log("Interactale Item Opened");
+    }
+
+    public void closeInteractableIcon()
+    {
+        Debug.Log("Interactale Item Closed");
+    }
+
+    private void checkInteraction()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if (hits.Length > 0)
+        {
+            foreach (RaycastHit2D rc in hits)
+            {
+                if (rc.transform.GetComponent<Interactable>())
+                {
+                    rc.transform.GetComponent<Interactable>().Interact();
+                    return;
+                }
+            }
+        }
     }
 }
