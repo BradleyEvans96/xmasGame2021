@@ -1348,6 +1348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 542046961}
   - component: {fileID: 542046960}
+  - component: {fileID: 542046964}
+  - component: {fileID: 542046963}
   m_Layer: 0
   m_Name: 014
   m_TagString: Untagged
@@ -1420,6 +1422,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542046963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542046959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: IceHockeyScene
+  inventory: []
+  isLocked: 0
+  savePlayerPosition: 1
+--- !u!61 &542046964
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542046959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.25, y: 6.55}
+    newSize: {x: 13.25, y: 6.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.25, y: 6.55}
+  m_EdgeRadius: 0
 --- !u!1 &558365757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1829,8 @@ GameObject:
   m_Component:
   - component: {fileID: 657666687}
   - component: {fileID: 657666688}
+  - component: {fileID: 657666690}
+  - component: {fileID: 657666689}
   m_Layer: 0
   m_Name: Richard & Geogina's House
   m_TagString: Untagged
@@ -1857,6 +1903,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &657666689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657666686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: LibbyHouseDownstairs
+  inventory: []
+  isLocked: 0
+  savePlayerPosition: 1
+--- !u!61 &657666690
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657666686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 9.9}
+    newSize: {x: 10, y: 9.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 9.9}
+  m_EdgeRadius: 0
 --- !u!1 &675822330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,7 +2586,7 @@ MonoBehaviour:
   sceneName: 
   inventory: []
   isLocked: 1
-  commentaryText: {fileID: 0}
+  savePlayerPosition: 0
 --- !u!61 &847767938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2945,7 +3033,7 @@ MonoBehaviour:
   sceneName: 
   inventory: []
   isLocked: 0
-  commentaryText: {fileID: 0}
+  savePlayerPosition: 0
 --- !u!61 &1000484710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4687,10 +4775,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TemplateScene
+  sceneName: LibbyParentsHouseScene
   inventory: []
   isLocked: 0
-  commentaryText: {fileID: 0}
+  savePlayerPosition: 1
 --- !u!61 &1542674827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5378,6 +5466,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1994545735}
   - component: {fileID: 1994545734}
+  - component: {fileID: 1994545737}
+  - component: {fileID: 1994545736}
   m_Layer: 0
   m_Name: 010
   m_TagString: Untagged
@@ -5450,6 +5540,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994545736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994545733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: TemplateScene
+  inventory: []
+  isLocked: 1
+  savePlayerPosition: 0
+--- !u!61 &1994545737
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994545733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.02, y: 6.51}
+    newSize: {x: 10.02, y: 6.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.02, y: 6.51}
+  m_EdgeRadius: 0
 --- !u!1 &1996040073
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,6 +5596,7 @@ GameObject:
   - component: {fileID: 1996040076}
   - component: {fileID: 1996040075}
   - component: {fileID: 1996040079}
+  - component: {fileID: 1996040080}
   m_Layer: 0
   m_Name: Libby
   m_TagString: Player
@@ -5507,6 +5640,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   checkRadius: 0.2
+  loadPosition: 1
 --- !u!61 &1996040076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5625,6 +5759,19 @@ MonoBehaviour:
   - {fileID: 188184881}
   - {fileID: 1442525972}
   - {fileID: 1223276654}
+--- !u!114 &1996040080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996040073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c5fb80326f743d9b6e63c36ee66c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1996040073}
 --- !u!1 &2068360726
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,7 +5798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068360726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 92.45662, y: -77.4, z: 10}
+  m_LocalPosition: {x: 230, y: -77.4, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6291,7 +6438,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 100000
+    maxNumParticles: 10000000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -6358,7 +6505,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 150, y: 1, z: 1}
+    m_Scale: {x: 500, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0

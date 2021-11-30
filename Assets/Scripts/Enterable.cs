@@ -10,7 +10,9 @@ public class Enterable : Interactable
 
     public bool isLocked;
 
-    public GameObject commentaryText;
+    public bool savePlayerPosition;
+
+    SavePlayerPos playerPosData;
 
     public override void Interact()
     {
@@ -21,6 +23,10 @@ public class Enterable : Interactable
         }
         else
         {
+            if (savePlayerPosition)
+            {
+                playerPosData.PlayerPosSave();
+            }
             SceneManager.LoadScene(sceneName);
         }
     }
@@ -28,5 +34,6 @@ public class Enterable : Interactable
     // Added to an object that can be entered
     private void Start()
     {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
     }
 }

@@ -21,16 +21,30 @@ public class PlayerMovement : MonoBehaviour
 
     private int maxjumpCount = 1;
 
+    SavePlayerPos playerPosData;
+
+    public GameObject interactIcon;
+
+    public GameObject pickupIcon;
+
+    public bool loadPosition = false;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
     private void Start()
     {
         jumpCount = maxjumpCount;
+        interactIcon.SetActive(false);
+        pickupIcon.SetActive(false);
     }
 
     // Awake is called after all objects are initialised. Called in a random order.
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>(); // will look for a component on this GameObject (what the script is attached to) of type Rigidbody 2D
+        if (loadPosition)
+        {
+            playerPosData = FindObjectOfType<SavePlayerPos>();
+            playerPosData.PlayerPosLoad();
+        }
     }
 
     // Update is called once per frame
@@ -39,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             checkInteraction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            checkPickup();
         }
 
         // Get Inputs
@@ -101,12 +120,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void openInteractableIcon()
     {
-        Debug.Log("Interactale Item Opened");
+        interactIcon.SetActive(true);
     }
 
     public void closeInteractableIcon()
     {
-        Debug.Log("Interactale Item Closed");
+        interactIcon.SetActive(false);
+    }
+
+    public void openPickUpIcon()
+    {
+        pickupIcon.SetActive(true);
+    }
+
+    public void closePickUpIcon()
+    {
+        pickupIcon.SetActive(false);
     }
 
     private void checkInteraction()
@@ -120,6 +149,23 @@ public class PlayerMovement : MonoBehaviour
                 if (rc.transform.GetComponent<Interactable>())
                 {
                     rc.transform.GetComponent<Interactable>().Interact();
+                    return;
+                }
+            }
+        }
+    }
+
+    private void checkPickup()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if (hits.Length > 0)
+        {
+            foreach (RaycastHit2D rc in hits)
+            {
+                if (rc.transform.GetComponent<Pickable>())
+                {
+                    rc.transform.GetComponent<Pickable>().Interact();
                     return;
                 }
             }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : Interactable
+public class Pickup : Pickable
 {
     // Start is called before the first frame update
     private Inventory inventory;
@@ -10,7 +10,6 @@ public class Pickup : Interactable
 
     public override void Interact()
     {
-        Debug.Log("This item is able to be picked up and stored in your inventory");
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
