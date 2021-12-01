@@ -14,6 +14,9 @@ public class Enterable : Interactable
 
     SavePlayerPos playerPosData;
 
+    //two booleans on enterable objects to check isParentsDoor or isAirport
+    // private bool of isLocked which is then determined if
+
     public override void Interact()
     {
         if (isLocked)
