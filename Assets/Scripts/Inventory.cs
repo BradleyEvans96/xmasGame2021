@@ -23,15 +23,10 @@ public class Inventory : MonoBehaviour
             {
                 isFull[i] = true;
                 Instantiate(itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)], slots[i].transform, false);
-                Debug.Log("Hide this object: " + itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)]);
+                slots[i] = itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)];
                 PlayerPrefs.SetInt("TimeToInventorySlot" + i + "Load", 0);
                 PlayerPrefs.Save();
             }
         }
     }
-
 }
-
-
-//inventorySlotSaved == 0 means no items saved
-// inventorySlt saved ==1 then inventorysaved == 0 means first item of array is saved
