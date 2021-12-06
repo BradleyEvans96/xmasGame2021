@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool loadPosition = false;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
+
     private void Start()
     {
         jumpCount = maxjumpCount;

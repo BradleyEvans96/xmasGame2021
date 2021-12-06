@@ -347,4 +347,6 @@
 "Assets/Scripts/Pickup.cs"
 "Assets/Scripts/PlayerInteraction.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Quit.cs"
+"Assets/Scripts/SavePlayerInventory.cs"
 "Assets/Scripts/SavePlayerPos.cs"
