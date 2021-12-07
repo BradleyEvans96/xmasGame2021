@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour
 
     public GameObject[] itemCatalogue;
 
+    public GameObject[] slotItems;
+
     private void Start()
     {
         playerInventoryData = FindObjectOfType<SavePlayerInventory>();
@@ -23,7 +25,7 @@ public class Inventory : MonoBehaviour
             {
                 isFull[i] = true;
                 Instantiate(itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)], slots[i].transform, false);
-                slots[i] = itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)];
+                slotItems[i] = itemCatalogue[PlayerPrefs.GetInt("inventorySlot" + i)];
                 PlayerPrefs.SetInt("TimeToInventorySlot" + i + "Load", 0);
                 PlayerPrefs.Save();
             }

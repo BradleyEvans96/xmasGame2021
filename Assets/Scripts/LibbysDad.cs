@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LibbysDad : Interactable
 {
     private Inventory inventory;
-    public GameObject porkScratchings;
     // Start is called before the first frame update
     public GameObject keyForDoor;
 
     private bool objectFoundAfterSearch = false;
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         keyForDoor.SetActive(false);
     }
-
     public override void Interact()
     {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == true)
             {
-                Debug.Log("Slot Full");
-                Debug.Log(inventory.slots[i]);
-                Debug.Log(porkScratchings);
-                if (inventory.slots[i] == porkScratchings)
+                if (inventory.slotItems[i] == inventory.itemCatalogue[0])
                 {
-                    Debug.Log("Pork Scratchings Found");
                     keyForDoor.SetActive(true);
+                    objectFoundAfterSearch = true;
                     inventory.isFull[i] = false;
-                    inventory.slots[i] = null;
+                    inventory.slotItems[i] = null;
+                    GameObject.FindGameObjectWithTag("Slot " + i).GetComponent<Slot>().UseItem();
                     PlayerPrefs.DeleteKey("inventorySlot" + i);
                     PlayerPrefs.DeleteKey("inventorySlot" + i + "Saved");
                 }
@@ -38,12 +35,12 @@ public class LibbysDad : Interactable
         }
         if (!objectFoundAfterSearch)
         {
-
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().pulseShowMessage("Dad: I can't give you the key yet! Let's make a trade?");
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().pulseShowMessage("Dad: Nom Nom! Thanks, here is the key for the door!");
         }
     }
     // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

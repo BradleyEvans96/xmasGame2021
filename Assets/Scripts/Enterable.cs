@@ -21,8 +21,7 @@ public class Enterable : Interactable
     {
         if (isLocked)
         {
-            // commentaryText.text = "This room is locked. You shall not pass";
-            Debug.Log("This room is locked, you shall not pass");
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().pulseShowMessage("Libby: Damn, it's locked. I need to find the key...");
         }
         else
         {

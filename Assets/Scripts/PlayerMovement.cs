@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject pickupIcon;
 
+    public GameObject speechBubble;
+
+    public GameObject speechBubbleText;
+
     public bool loadPosition = false;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
 
@@ -35,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         jumpCount = maxjumpCount;
         interactIcon.SetActive(false);
         pickupIcon.SetActive(false);
+        speechBubble.SetActive(false);
     }
 
     // Awake is called after all objects are initialised. Called in a random order.
@@ -119,6 +124,17 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    IEnumerator pulseShow()
+    {
+        speechBubble.SetActive(true);
+        yield return new WaitForSeconds(5);
+        speechBubble.SetActive(false);
+    }
+    public void pulseShowMessage(string textToShow)
+    {
+        speechBubbleText.GetComponent<Text>().text = textToShow;
+        StartCoroutine(pulseShow());
+    }
     public void openInteractableIcon()
     {
         interactIcon.SetActive(true);

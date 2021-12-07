@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IceHockeyScene.unity
     guid: 052f44ab9826d4dc5a3f227e5cbe207c
+  - enabled: 1
+    path: Assets/Scenes/LibbyHouseDownstairs.unity
+    guid: 348cfb1fc01f54e78a9fd515cea50a48
+  - enabled: 1
+    path: Assets/Scenes/LibbyHouseUpstairs.unity
+    guid: dabe0eeac8cea424bb1155b13b78c40f
   m_configObjects: {}

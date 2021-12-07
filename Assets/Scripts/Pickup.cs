@@ -11,6 +11,7 @@ public class Pickup : Pickable
 
     public override void Interact()
     {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -20,11 +21,14 @@ public class Pickup : Pickable
                 Instantiate(inventoryItem, inventory.slots[i].transform, false);
                 for (int j = 0; j < inventory.itemCatalogue.Length; j++)
                 {
-                    Debug.Log("Catalogue: " + inventory.itemCatalogue[i]);
+                    Debug.Log("Catalogue: " + inventory.itemCatalogue[j]);
                     Debug.Log("Picked Up: " + inventoryItem);
                     if (inventoryItem == inventory.itemCatalogue[j])
                     {
+                        inventory.slotItems[i] = inventory.itemCatalogue[j];
                         playerInventoryData.PlayerInventoryItemSave(i, j);
+                        Debug.Log("Catalogue Matched with pickup");
+                        break;
                     }
                 }
                 Destroy(gameObject);
@@ -36,7 +40,6 @@ public class Pickup : Pickable
     // Added to an object that can be entered
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         playerInventoryData = FindObjectOfType<SavePlayerInventory>();
     }
 }
