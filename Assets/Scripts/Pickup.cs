@@ -21,13 +21,10 @@ public class Pickup : Pickable
                 Instantiate(inventoryItem, inventory.slots[i].transform, false);
                 for (int j = 0; j < inventory.itemCatalogue.Length; j++)
                 {
-                    Debug.Log("Catalogue: " + inventory.itemCatalogue[j]);
-                    Debug.Log("Picked Up: " + inventoryItem);
                     if (inventoryItem == inventory.itemCatalogue[j])
                     {
                         inventory.slotItems[i] = inventory.itemCatalogue[j];
                         playerInventoryData.PlayerInventoryItemSave(i, j);
-                        Debug.Log("Catalogue Matched with pickup");
                         break;
                     }
                 }

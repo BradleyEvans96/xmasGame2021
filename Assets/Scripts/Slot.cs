@@ -17,12 +17,10 @@ public class Slot : MonoBehaviour
         bool objectMatched = false;
         foreach (Transform child in transform)
         {
-            Debug.Log(child.gameObject);
             if (child.gameObject == item)
             {
                 objectMatched = true;
             }
-            Debug.Log(objectMatched);
         }
         return objectMatched;
     }

@@ -1887,8 +1887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: SnowScene
-  inventory: []
   isLocked: 1
+  isLibbyParentsDoor: 1
+  isAirport: 0
   savePlayerPosition: 0
 --- !u!61 &1069044096
 BoxCollider2D:
