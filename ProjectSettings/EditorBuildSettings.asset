@@ -23,4 +23,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LibbyHouseUpstairs.unity
     guid: dabe0eeac8cea424bb1155b13b78c40f
+  - enabled: 1
+    path: Assets/Scenes/Bradley's House Downstairs.unity
+    guid: 46a08c95b06014d0dbd4e35842dc39bd
+  - enabled: 1
+    path: Assets/Scenes/BradleyHouseUpstairs.unity
+    guid: 0751306e9eee54f868b60184ad7c670c
+  - enabled: 1
+    path: Assets/Scenes/DerrenBrown.unity
+    guid: ccd87421eb46b47ce90bc9b183441944
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 3f8fe7613bf4d4d1ab2d77d6d8f92510
+  - enabled: 1
+    path: Assets/Scenes/FlowerShop.unity
+    guid: 73e4f598f9c2a452bb72563c785d0493
+  - enabled: 1
+    path: Assets/Scenes/Gloryholes.unity
+    guid: 89be205a7f67643f7ac15d607da92831
+  - enabled: 1
+    path: Assets/Scenes/MaltaScene.unity
+    guid: 245d56af526224edea723ac4c713de4d
+  - enabled: 1
+    path: Assets/Scenes/TheBotanist.unity
+    guid: ea6d03be738f3407b989ca19c874fbae
   m_configObjects: {}

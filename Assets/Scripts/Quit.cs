@@ -31,8 +31,7 @@ public class Quit : MonoBehaviour
         PlayerPrefs.DeleteKey("p_y");
         PlayerPrefs.DeleteKey("TimeToLoad");
         PlayerPrefs.DeleteKey("Saved");
-
-        SceneManager.LoadScene("SnowScene");
+        Application.Quit();
     }
 }
 
