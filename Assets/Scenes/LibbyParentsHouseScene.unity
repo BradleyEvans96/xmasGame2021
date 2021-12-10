@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772033939f8914f6a9dc1aa94e63630a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItem: {fileID: 7566842760816903177, guid: 74ee3197307104ff380d12401aecc40d, type: 3}
+  inventoryItem: {fileID: 2465708408173596357, guid: 70d191ec070a64fbd9c343371fc04e2f, type: 3}
 --- !u!61 &1046611436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3784,7 +3784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3c98b740027416dae17faf3d5cc502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1996040073}
 --- !u!4 &1917678369
 Transform:
   m_ObjectHideFlags: 0
@@ -4275,7 +4274,7 @@ MonoBehaviour:
   - {fileID: 1693884878}
   - {fileID: 1843719121}
   itemCatalogue:
-  - {fileID: 7566842760816903177, guid: 74ee3197307104ff380d12401aecc40d, type: 3}
+  - {fileID: 2465708408173596357, guid: 70d191ec070a64fbd9c343371fc04e2f, type: 3}
   - {fileID: 4242614715403238737, guid: 4a3b3cb7054454ba68cf64d6ad946bec, type: 3}
   - {fileID: 1577944487336927283, guid: 37698fd09d84b424faa2375e604febd4, type: 3}
   - {fileID: 263953408280256938, guid: b2b656998fae94be39e6e26f0cda1840, type: 3}

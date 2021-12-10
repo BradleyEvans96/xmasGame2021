@@ -319,11 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  isLocked: 1
+  sceneName: FlowerShop
+  isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 0
-  savePlayerPosition: 0
+  savePlayerPosition: 1
 --- !u!61 &13720337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -854,7 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3c98b740027416dae17faf3d5cc502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1996040073}
 --- !u!4 &216402378
 Transform:
   m_ObjectHideFlags: 0
@@ -2800,7 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: MaltaScene
   isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 1
@@ -2924,7 +2923,6 @@ GameObject:
   - component: {fileID: 847767936}
   - component: {fileID: 847767935}
   - component: {fileID: 847767938}
-  - component: {fileID: 847767937}
   m_Layer: 0
   m_Name: 016
   m_TagString: Untagged
@@ -2997,23 +2995,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &847767937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847767934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
-  isLocked: 1
-  isLibbyParentsDoor: 0
-  isAirport: 0
-  savePlayerPosition: 0
 --- !u!61 &847767938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3584,11 +3565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  isLocked: 1
+  sceneName: Bradley's House Downstairs
+  isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 0
-  savePlayerPosition: 0
+  savePlayerPosition: 1
 --- !u!61 &1000484710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5087,11 +5068,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  isLocked: 1
+  sceneName: TheBotanist
+  isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 0
-  savePlayerPosition: 0
+  savePlayerPosition: 1
 --- !u!61 &1513248154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6164,11 +6145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  isLocked: 1
+  sceneName: DerrenBrown
+  isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 0
-  savePlayerPosition: 0
+  savePlayerPosition: 1
 --- !u!61 &1852407699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6531,11 +6512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51b14ce7f8d941cd956bd494a803590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TemplateScene
-  isLocked: 1
+  sceneName: Gloryholes
+  isLocked: 0
   isLibbyParentsDoor: 0
   isAirport: 0
-  savePlayerPosition: 0
+  savePlayerPosition: 1
 --- !u!61 &1994545737
 BoxCollider2D:
   m_ObjectHideFlags: 0
